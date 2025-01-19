@@ -26,6 +26,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     double buttonWidth = MediaQuery.of(context).size.width * 0.6;
     double buttonHeight = 50.0;
+    double screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
       body: Container(
@@ -39,7 +40,7 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 300.0),
+              padding: EdgeInsets.only(top: screenHeight / 4),
               child: Container(
                 height: 230,
                 width: 230,
@@ -49,7 +50,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 200),
+              padding: EdgeInsets.only(top: screenHeight / 3),
               child: ElevatedButton(
                 onPressed: () => Navigator.push(
                   context,
